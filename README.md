@@ -1,88 +1,78 @@
-<h1 align="center">Hi 👋, I'm Sukhmandeep Singh</h1>
-<h3 align="center">Applied ML Engineer | Edge AI | Production ML Systems</h3>
+<h1 align="center">Sukhmandeep Singh</h1>
+<h3 align="center">Applied ML Engineer — Production ML Systems · Edge AI · Scientific ML</h3>
 
 <p align="center">
-I build and deploy machine learning systems that run in real-world constraints — not just notebooks.
+I build and deploy machine learning systems that run under real constraints — limited compute, tight latency budgets, and messy real-world data. Not just notebooks.
+</p>
+
+<p align="center">
+<b>Open to contract and full-time work</b> · <a href="mailto:sukhnansaran@gmail.com">sukhnansaran@gmail.com</a>
 </p>
 
 ---
 
-## 🚀 About Me
+## What I do
 
-• Applied ML Engineer with hands-on experience in **deploying models on edge devices**  
-• Built and optimized ML systems for **Android, Raspberry Pi, and Jetson Nano**  
-• Focused on **low-latency inference, model compression, and production pipelines**  
-• Experience across **RAG systems, generative AI, and scalable ML workflows**  
-
----
-
-## 🧠 What I Actually Do
-
-- Take ML models from **prototype → optimized → deployed system**
-- Reduce model size and latency using **quantization & optimization techniques**
-- Build **end-to-end pipelines (training → inference → deployment)**
-- Work with **real constraints (compute, memory, latency)** — not ideal environments
+- Take models from **prototype → optimized → deployed**, on hardware that isn't a GPU cluster
+- Compress and accelerate inference with **quantization, ONNX export, and architecture-level optimization**
+- Ship **full systems, not scripts** — API, database, task queue, containers, migrations, tests
+- Build **end-to-end pipelines**: training → evaluation → inference → deployment
+- Apply ML to **scientific and high-stakes domains** where correctness matters more than leaderboard scores
 
 ---
 
-## ⚙️ Tech Stack
+## Selected work
 
-### Core
-Python • PyTorch • TensorFlow • Scikit-learn  
+### Immigration Intelligence Platform — production RAG system
+[`visa-rag-llm`](https://github.com/sukhmansaran/visa-rag-llm) · Python · FastAPI · Next.js 14
 
-### Generative AI
-Transformers • HuggingFace • Diffusers • RAG Pipelines  
+A full-stack retrieval-augmented generation platform for Canadian immigration guidance, built as a real production system rather than a demo.
 
-### Deployment & Optimization
-Docker • ONNX • Edge Devices (Android, Raspberry Pi, Jetson Nano)  
+- **Hybrid RAG pipeline** — Llama 3.2 via Ollama, Nomic embeddings, ChromaDB vector store
+- **Autonomous crawler** over official policy sources with robots.txt compliance, deduplication, and rate limiting
+- **Change detection** that monitors regulatory updates and notifies on policy shifts
+- **Production backend** — PostgreSQL + SQLModel, Alembic migrations, Redis + Celery workers, Dockerized, pytest suite
+- **Typed frontend** — Next.js 14 App Router, React 18, TypeScript, Tailwind
 
-### Data & Backend
-PostgreSQL • Firebase • Vector DBs (Pinecone, ChromaDB)
+### Edge ML deployment — NIT Warangal
+Deep learning models for image classification deployed across **Android, Raspberry Pi, and Jetson Nano** under strict hardware limits.
 
----
+- **10–33 FPS** real-time inference
+- **<350 ms** end-to-end latency
+- **~3 MB** compressed model footprint
 
-## 📌 Selected Work
+*Focus: real-time performance where compute, memory, and power are all constrained.*
 
-### 🧠 Edge ML Deployment (NIT Warangal)
+### Generative model fine-tuning
+[`fine-tuning-stable-diffusion-models-lora-dreambooth`](https://github.com/sukhmansaran/fine-tuning-stable-diffusion-models-lora-dreambooth) · Jupyter
 
-• Deployed optimized models across edge devices  
-• Achieved:
-  - **10–33 FPS inference**
-  - **<350 ms latency**
-  - **~3MB compressed models**
+Stable Diffusion fine-tuning with **LoRA and DreamBooth**, optimized for training in **<16 GB VRAM** environments.
 
-→ Focus: real-time performance under strict hardware limits  
+### ML on biological data
+[`classification-of-mice-based-on-protein-expression-levels`](https://github.com/sukhmansaran/classification-of-mice-based-on-protein-expression-levels) · Jupyter
 
----
-
-### 🤖 RAG-Based AI Assistant
-
-• Built end-to-end **Retrieval-Augmented Generation system**  
-• Integrated **vector databases + document ingestion pipelines**  
-• Designed for **context-aware responses over PDFs & web data**
+Multi-class classification over protein expression profiles — feature selection and model comparison on high-dimensional biological measurements.
 
 ---
 
-### 🎨 Stable Diffusion Optimization
+## Tech stack
 
-• Fine-tuned models using **LoRA & DreamBooth**  
-• Optimized training for **low VRAM environments (<16GB)**  
-• Deployed efficient pipelines for generative workloads  
+**Core** — Python · PyTorch · TensorFlow · scikit-learn · NumPy · pandas
 
----
+**Generative AI** — Transformers · HuggingFace · Diffusers · LoRA/DreamBooth · RAG · Ollama
 
-## 📊 Kaggle
+**Backend & infra** — FastAPI · PostgreSQL · SQLModel · Alembic · Redis · Celery · Docker · pytest
 
-🔗 https://www.kaggle.com/sukhmansaran  
+**Deployment & optimization** — ONNX · quantization · Jetson Nano · Raspberry Pi · Android
 
----
-
-## 🤝 Connect
-
-📧 sukhnansaran@gmail.com  
-🌐 https://github.com/sukhmansaran  
-📊 https://www.kaggle.com/sukhmansaran  
+**Data** — ChromaDB · Pinecone · Firebase
 
 ---
 
-⭐ If you're working on real-world ML systems or edge AI, let's talk.
+## Contact
+
+- **Email** — sukhnansaran@gmail.com
+- **LinkedIn** — [in/sukhmand-singh](https://www.linkedin.com/in/sukhmand-singh/)
+- **Kaggle** — [sukhmansaran](https://www.kaggle.com/sukhmansaran)
+
+Working on production ML, edge inference, or ML for scientific discovery? Get in touch.
