@@ -1,78 +1,75 @@
 <h1 align="center">Sukhmandeep Singh</h1>
-<h3 align="center">Applied ML Engineer — Production ML Systems · Edge AI · Scientific ML</h3>
+<h3 align="center">ML Engineer · Protein &amp; Antibody Design · Computational Biology</h3>
 
 <p align="center">
-I build and deploy machine learning systems that run under real constraints — limited compute, tight latency budgets, and messy real-world data. Not just notebooks.
+I build the ML pipelines that turn protein models into design decisions: protein language models, structure prediction, candidate scoring and ranking, on HPC and cloud.
 </p>
 
 <p align="center">
-<b>Open to contract and full-time work</b> · <a href="mailto:sukhnansaran@gmail.com">sukhnansaran@gmail.com</a>
+<b>Open to full-time roles in protein design and AI drug discovery · open to relocation</b><br>
+<a href="mailto:sukhnansaran@gmail.com">sukhnansaran@gmail.com</a> · <a href="https://www.linkedin.com/in/sukhmand-singh/">LinkedIn</a>
 </p>
 
 ---
 
-## What I do
+## Experience
 
-- Take models from **prototype → optimized → deployed**, on hardware that isn't a GPU cluster
-- Compress and accelerate inference with **quantization, ONNX export, and architecture-level optimization**
-- Ship **full systems, not scripts** — API, database, task queue, containers, migrations, tests
-- Build **end-to-end pipelines**: training → evaluation → inference → deployment
-- Apply ML to **scientific and high-stakes domains** where correctness matters more than leaderboard scores
+### AI Engineer, Nucleovir Therapeutics · Mar – Oct 2026 · Pune, India
+In silico antibody and protein design. *Project details are under NDA.*
+
+- Built evaluation, filtering and ranking pipelines combining structure predictions with sequence- and structure-based scoring; on one antibody-design project this **narrowed ~1,500 generated candidates to a top 30** for experimental testing.
+- Integrated **protein language model and structure-prediction pipelines** into design workflows with computational biology and R&amp;D teams.
+- Optimised GPU structure-prediction runs with batched inference and multi-worker CPU parallelism.
+- Deployed and orchestrated pipelines across **AWS, SLURM and Nextflow**, containerised with Docker.
+
+### ML Research Engineer, NIT Warangal · Aug 2025 – Feb 2026
+Deep learning models deployed offline on **Android, Raspberry Pi and Jetson Nano**: 10–33 FPS, &lt;350 ms end-to-end latency, model size cut from 10 MB to ~3 MB with quantization. Mentored 10+ interns.
+
+---
+
+## Open source
+
+**[Graphein](https://github.com/a-r-j/graphein)** — graph representations of protein structures · 4 merged PRs
+
+- Fixed PyTorch Geometric conversion misaligning edge features with `edge_index` — [#497](https://github.com/a-r-j/graphein/pull/497)
+- Fixed hydrogen-bond detection in `add_hydrogen_bond_interactions` — [#458](https://github.com/a-r-j/graphein/pull/458)
+- Kept atom charges when saving PDB files — [#498](https://github.com/a-r-j/graphein/pull/498)
+- Fixed the extras flag on import messages — [#459](https://github.com/a-r-j/graphein/pull/459)
+- Under review: alternate-location conformer mixing — [#515](https://github.com/a-r-j/graphein/pull/515)
+
+**[BioPandas](https://github.com/BioPandas/biopandas)** — pandas tools for molecular structure files
+
+- Under review: Mol2 bond parsing — [#170](https://github.com/BioPandas/biopandas/pull/170) · `read_mol2` fix when ATOM ends the input — [#171](https://github.com/BioPandas/biopandas/pull/171)
 
 ---
 
 ## Selected work
 
-### Immigration Intelligence Platform — production RAG system
-[`visa-rag-llm`](https://github.com/sukhmansaran/visa-rag-llm) · Python · FastAPI · Next.js 14
+### Fine-tuning RFdiffusion3 for antibody CDR design · in progress
+Fine-tuning a diffusion model to redesign antibody CDR loops against a target epitope, with a held-out benchmark against the released weights. *Write-up coming; code available on request.*
 
-A full-stack retrieval-augmented generation platform for Canadian immigration guidance, built as a real production system rather than a demo.
+### Alzheimer's research assistant — grounded RAG over biomedical literature
+[`alzheimers-rag`](https://github.com/sukhmansaran/alzheimers-rag) · Python
 
-- **Hybrid RAG pipeline** — Llama 3.2 via Ollama, Nomic embeddings, ChromaDB vector store
-- **Autonomous crawler** over official policy sources with robots.txt compliance, deduplication, and rate limiting
-- **Change detection** that monitors regulatory updates and notifies on policy shifts
-- **Production backend** — PostgreSQL + SQLModel, Alembic migrations, Redis + Celery workers, Dockerized, pytest suite
-- **Typed frontend** — Next.js 14 App Router, React 18, TypeScript, Tailwind
+Hybrid dense + BM25 retrieval with rank fusion, local LLM inference, cited answers and a hallucination guard. Evaluated on 44 labelled questions (hit@5, MRR); tested with pytest and GitHub Actions CI.
 
-### Edge ML deployment — NIT Warangal
-Deep learning models for image classification deployed across **Android, Raspberry Pi, and Jetson Nano** under strict hardware limits.
+### Production RAG platform
+[`visa-rag-llm`](https://github.com/sukhmansaran/visa-rag-llm) · FastAPI · Next.js · PostgreSQL · Redis · Celery
 
-- **10–33 FPS** real-time inference
-- **<350 ms** end-to-end latency
-- **~3 MB** compressed model footprint
-
-*Focus: real-time performance where compute, memory, and power are all constrained.*
-
-### Generative model fine-tuning
-[`fine-tuning-stable-diffusion-models-lora-dreambooth`](https://github.com/sukhmansaran/fine-tuning-stable-diffusion-models-lora-dreambooth) · Jupyter
-
-Stable Diffusion fine-tuning with **LoRA and DreamBooth**, optimized for training in **<16 GB VRAM** environments.
-
-### ML on biological data
-[`classification-of-mice-based-on-protein-expression-levels`](https://github.com/sukhmansaran/classification-of-mice-based-on-protein-expression-levels) · Jupyter
-
-Multi-class classification over protein expression profiles — feature selection and model comparison on high-dimensional biological measurements.
+Self-hosted RAG system with an autonomous crawler, change detection, verified-answer path and a full pytest suite.
 
 ---
 
 ## Tech stack
 
-**Core** — Python · PyTorch · TensorFlow · scikit-learn · NumPy · pandas
+**Computational biology** — AlphaFold · ColabFold · ESM · ProteinMPNN · RFdiffusion · Biopython · PyMOL · Graphein · BioPandas
 
-**Generative AI** — Transformers · HuggingFace · Diffusers · LoRA/DreamBooth · RAG · Ollama
+**ML** — Python · PyTorch · TensorFlow · Hugging Face Transformers &amp; Diffusers · scikit-learn · XGBoost
 
-**Backend & infra** — FastAPI · PostgreSQL · SQLModel · Alembic · Redis · Celery · Docker · pytest
+**HPC &amp; MLOps** — SLURM · Nextflow · AWS · Docker · batched GPU inference · ONNX · quantization
 
-**Deployment & optimization** — ONNX · quantization · Jetson Nano · Raspberry Pi · Android
-
-**Data** — ChromaDB · Pinecone · Firebase
+**Backend** — FastAPI · PostgreSQL · Redis · Celery · pytest
 
 ---
 
-## Contact
-
-- **Email** — sukhnansaran@gmail.com
-- **LinkedIn** — [in/sukhmand-singh](https://www.linkedin.com/in/sukhmand-singh/)
-- **Kaggle** — [sukhmansaran](https://www.kaggle.com/sukhmansaran)
-
-Working on production ML, edge inference, or ML for scientific discovery? Get in touch.
+Working on protein design, antibody engineering or ML for drug discovery? I'd love to talk: **sukhnansaran@gmail.com**
